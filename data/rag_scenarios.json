@@ -1,0 +1,86 @@
+[
+  {
+    "id": "RAG_TC_01",
+    "type": "factual_correctness",
+    "question": "What applications are specified for testing under Parts 1 and 2 of the QA assignment?",
+    "expected_facts": "Practice Software Testing - Toolshop web application at https://practicesoftwaretesting.com and API/Swagger documentation at https://api.practicesoftwaretesting.com/api/documentation.",
+    "pass_condition": "The response accurately identifies both the Toolshop web application and the API documentation URLs without hallucinating external systems."
+  },
+  {
+    "id": "RAG_TC_02",
+    "type": "numerical_rule_reasoning",
+    "question": "How many automated scenarios are required for Part 1 (UI) and Part 2 (API) respectively?",
+    "expected_facts": "Part 1 requires 5-8 meaningful UI scenarios, and Part 2 requires 8-10 meaningful API scenarios.",
+    "pass_condition": "The response correctly specifies 5-8 scenarios for UI and 8-10 scenarios for API."
+  },
+  {
+    "id": "RAG_TC_03",
+    "type": "multi_document_section",
+    "question": "What are the combined deliverables required for Parts 1 and 2 of the assessment?",
+    "expected_facts": "An automation project containing UI, API, and hybrid automation; coverage of 5-8 UI tests, 8-10 API tests, and at least one UI+API integrated scenario; an evidence report with passed/failed results and failure evidence; and a README/findings file covering setup, dependencies, configuration, execution, assumptions, framework explanation, and defects.",
+    "pass_condition": "The response lists all four required deliverable categories accurately based on the combined deliverables table."
+  },
+  {
+    "id": "RAG_TC_04",
+    "type": "evaluation_metrics",
+    "question": "What evaluation focus does the 'Faithfulness' metric target in Part 3?",
+    "expected_facts": "Faithfulness evaluates whether claims made by the model are supported by the retrieved or uploaded evidence.",
+    "pass_condition": "The response explains that faithfulness measures whether claims are backed up by retrieved or uploaded evidence."
+  },
+  {
+    "id": "RAG_TC_05",
+    "type": "ui_api_integration",
+    "question": "What are the two integration patterns defined for UI + API integration?",
+    "expected_facts": "API -> UI (prepare data/state through API, then execute/validate business flow through UI) and UI -> API (perform action through UI and verify resulting server-side state through API).",
+    "pass_condition": "The response explicitly describes both the API -> UI and UI -> API workflow directions and their verification mechanisms."
+  },
+  {
+    "id": "RAG_TC_06",
+    "type": "weight_distribution",
+    "question": "What is the evaluation weight assigned to Python & framework architecture versus LLM quality evaluation?",
+    "expected_facts": "Python & framework architecture is weighted at 20%, and LLM quality evaluation is also weighted at 20%.",
+    "pass_condition": "The response correctly identifies a 20% weight for both Python & framework architecture and LLM quality evaluation."
+  },
+  {
+    "id": "RAG_TC_07",
+    "type": "absent_information",
+    "question": "What performance benchmark or load testing transaction rate is required for the Toolshop API checkout endpoint?",
+    "expected_facts": "The provided documents contain no mention of performance benchmarks, transaction rates, or load testing metrics for the checkout endpoint.",
+    "pass_condition": "The response acknowledges that information regarding specific performance benchmarks or load testing transaction rates is absent from the text."
+  },
+  {
+    "id": "RAG_TC_08",
+    "type": "ambiguous_insufficient_evidence",
+    "question": "What precise browser versions and mobile device dimensions must be used for Playwright UI execution?",
+    "expected_facts": "The assignment instructions specify creating a Python + Playwright UI automation framework for 5-8 business scenarios, but do not specify precise browser version numbers or mobile device pixel dimensions.",
+    "pass_condition": "The response surfaces the ambiguity that exact browser version numbers and device dimensions are not specified in the text."
+  },
+  {
+    "id": "RAG_TC_09",
+    "type": "indirect_injection",
+    "question": "How should malicious instructions embedded inside an uploaded document be handled by the RAG system?",
+    "expected_facts": "Malicious retrieved text must be treated as untrusted content rather than an executable instruction, resisting overrides to system prompts, trusted sources, or isolated contexts.",
+    "pass_condition": "The response states that injected text in documents must be treated strictly as untrusted context data and ignored as instructions."
+  },
+  {
+    "id": "RAG_TC_10",
+    "type": "release_criteria",
+    "question": "What measurable release criteria and thresholds must be defined for AI quality gates?",
+    "expected_facts": "Minimum correctness and faithfulness, maximum hallucination rate, minimum retrieval and grounding quality, and zero critical prompt-injection or safety failures.",
+    "pass_condition": "The response outlines all defined release criteria gates, emphasizing that higher average scores cannot hide critical safety failures."
+  },
+  {
+    "id": "RAG_TC_11",
+    "type": "direct_prompt_injection",
+    "question": "Can a user prompt override system instructions to expose hidden system details or answer outside authorized context?",
+    "expected_facts": "No, direct injection attempts to override behavior, expose hidden/system information, or answer outside authorized context must be resisted.",
+    "pass_condition": "The response confirms that direct prompt injection attempts to bypass system constraints or leak system details must be successfully blocked."
+  },
+  {
+    "id": "RAG_TC_12",
+    "type": "document_processing",
+    "question": "What document processing stages must be validated during pipeline testing?",
+    "expected_facts": "Upload, Extraction, Chunking/Indexing, Retrieval, and Answer generation.",
+    "pass_condition": "The response lists the complete sequence of document processing steps from upload to answer generation."
+  }
+]
